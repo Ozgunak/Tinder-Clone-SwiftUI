@@ -10,14 +10,18 @@ import SwiftUI
 struct CardView: View {
     @State private var xOffset: CGFloat = 0
     @State private var degrees: Double = 0
-
+    @State private var cardVM = CardViewModel()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             ZStack(alignment: .top) {
-                Image(.max1)
+                Image(cardVM.currentImageName)
                     .resizable()
                     .scaledToFill()
-                
+                    .overlay {
+                        CardImageButtonOverlay()
+                            .environment(cardVM)
+                    }
                 SwipeActionIndicatorView(xOffset: $xOffset)
             }
             
@@ -33,6 +37,7 @@ struct CardView: View {
                 .onChanged(onDragChanged)
                 .onEnded(onDragEnded)
         )
+        
     }
 }
 
