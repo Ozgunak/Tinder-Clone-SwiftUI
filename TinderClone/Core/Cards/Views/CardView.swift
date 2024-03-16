@@ -18,15 +18,22 @@ struct CardView: View {
                 Image(cardVM.currentImageName)
                     .resizable()
                     .scaledToFill()
+                    .frame(width: SizeConstants.cardWidth, height: SizeConstants.cardHeight)
                     .overlay {
                         CardImageButtonOverlay()
                             .environment(cardVM)
                     }
+                
+                
+                CardImageIndicatorView()
+                    .environment(cardVM)
+                
                 SwipeActionIndicatorView(xOffset: $xOffset)
             }
             
             UserInfoView()
-                .padding(.horizontal)
+//                .padding(.horizontal)
+            
         }
         .frame(width: SizeConstants.cardWidth, height: SizeConstants.cardHeight)
         .clipShape(.rect(cornerRadius: 10))

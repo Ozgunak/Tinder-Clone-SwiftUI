@@ -8,10 +8,13 @@
 import Foundation
 
 @Observable class CardViewModel {
-    private var images: [String] = [
-        "max1", "max2", "max3"
+    var images: [String] = [
+        "max1", "max4", "max3", "charles1", "charles2", "charles3"
     ]
-    private var currentIndex: Int = 0
+    var charlesImages: [String] = [
+        "charles1", "charles2", "charles3"
+    ]
+    var currentIndex: Int = 0
     
     var currentImageName: String {
         images[currentIndex]

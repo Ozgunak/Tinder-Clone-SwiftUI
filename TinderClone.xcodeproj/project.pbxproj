@@ -17,6 +17,7 @@
 		F0D5A1832BA3CDF300F03105 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1822BA3CDF300F03105 /* SizeConstants.swift */; };
 		F0D5A1852BA4F0A700F03105 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1842BA4F0A700F03105 /* CardViewModel.swift */; };
 		F0D5A1872BA4F1FF00F03105 /* CardImageButtonOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */; };
+		F0D5A1892BA65F2700F03105 /* CardImageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F0D5A1822BA3CDF300F03105 /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
 		F0D5A1842BA4F0A700F03105 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageButtonOverlay.swift; sourceTree = "<group>"; };
+		F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				F0D5A17C2BA0D51100F03105 /* CardView.swift */,
 				F0D5A1842BA4F0A700F03105 /* CardViewModel.swift */,
 				F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */,
+				F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */,
 				F0D5A1802BA3CC4000F03105 /* SwipeActionIndicatorView.swift */,
 				F0D5A17E2BA0D51F00F03105 /* UserInfoView.swift */,
 			);
@@ -247,6 +250,7 @@
 				F0D5A17D2BA0D51100F03105 /* CardView.swift in Sources */,
 				F0D5A1872BA4F1FF00F03105 /* CardImageButtonOverlay.swift in Sources */,
 				F0D5A1812BA3CC4000F03105 /* SwipeActionIndicatorView.swift in Sources */,
+				F0D5A1892BA65F2700F03105 /* CardImageIndicatorView.swift in Sources */,
 				F0D5A15F2BA0D43900F03105 /* TinderCloneApp.swift in Sources */,
 				F0D5A17F2BA0D51F00F03105 /* UserInfoView.swift in Sources */,
 				F0D5A1832BA3CDF300F03105 /* SizeConstants.swift in Sources */,
