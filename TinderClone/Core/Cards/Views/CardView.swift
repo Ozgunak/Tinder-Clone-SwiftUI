@@ -44,6 +44,7 @@ struct CardView: View {
                 .onChanged(onDragChanged)
                 .onEnded(onDragEnded)
         )
+        .animation(.easeInOut(duration: 0.2), value: degrees)
         
     }
 }
@@ -56,10 +57,16 @@ private extension CardView {
     
     func onDragEnded(_ value: DragGesture.Value) {
         let width = value.translation.width
-        
+
         if abs(width) <= abs(SizeConstants.screenCutoff) {
             xOffset = 0
             degrees = 0
+        } else if width > SizeConstants.screenCutoff {
+            xOffset = 500
+            degrees = 12
+        } else {
+            xOffset = -500
+            degrees = -12
         }
     }
 }
