@@ -12,10 +12,10 @@ struct CardImageIndicatorView: View {
     
     var body: some View {
         HStack {
-            ForEach(0 ..< cardVM.images.count) { index in
+            ForEach(0 ..< cardVM.user.imageUrls.count) { index in
                 RoundedRectangle(cornerRadius: 3)
                     .frame(height: 4)
-                    .foregroundStyle(index == cardVM.currentIndex ? .white : .gray)
+                    .foregroundStyle(index == cardVM.currentImageIndex ? .white : .gray)
                     .animation(.spring(), value: index)
             }
         }
@@ -26,5 +26,5 @@ struct CardImageIndicatorView: View {
 
 #Preview {
     CardImageIndicatorView()
-        .environment(CardViewModel())
+        .environment(CardViewModel(user: MockUsers.users[0]))
 }

@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct UserInfoView: View {
+    @Environment(CardViewModel.self) private var cardVM
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Max")
+                Text(cardVM.user.name)
                     .font(.title)
                     .fontWeight(.heavy)
-                Text("26")
+                Text(cardVM.user.age)
                     .font(.title)
                     .fontWeight(.semibold)
                 
                 Spacer()
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    
+                }, label: {
                     Image(systemName: "arrow.up.circle")
                         .fontWeight(.bold)
                         .imageScale(.large)
                 })
             }
             
-            Text("F1 Racer | Legend")
+            Text(cardVM.user.info)
                 .font(.subheadline)
                 .lineLimit(2)
         }
@@ -43,4 +47,5 @@ struct UserInfoView: View {
 
 #Preview {
     UserInfoView()
+        .environment(CardViewModel(user: MockUsers.users[0]))
 }

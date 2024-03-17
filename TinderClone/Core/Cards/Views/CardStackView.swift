@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CardStackView: View {
-    @Environment(CardViewModel.self) private var cardVM
+    @Environment(UserViewModel.self) private var userVM
     var body: some View {
         ZStack {
-            ForEach(0 ..< cardVM.images.count) { card in
-                CardView()
+            ForEach(userVM.users) { user in
+                CardView(user: user)
             }
         }
     }
@@ -20,5 +20,5 @@ struct CardStackView: View {
 
 #Preview {
     CardStackView()
-        .environment(CardViewModel())
+        .environment(UserViewModel(service: UserService()))
 }

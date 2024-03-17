@@ -19,6 +19,9 @@
 		F0D5A1872BA4F1FF00F03105 /* CardImageButtonOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */; };
 		F0D5A1892BA65F2700F03105 /* CardImageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */; };
 		F0D5A18B2BA6669A00F03105 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A18A2BA6669A00F03105 /* CardStackView.swift */; };
+		F0D5A18E2BA66B4600F03105 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A18D2BA66B4600F03105 /* UserModel.swift */; };
+		F0D5A1922BA66BD900F03105 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1912BA66BD900F03105 /* UserService.swift */; };
+		F0D5A1952BA68A2500F03105 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A1942BA68A2500F03105 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageButtonOverlay.swift; sourceTree = "<group>"; };
 		F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageIndicatorView.swift; sourceTree = "<group>"; };
 		F0D5A18A2BA6669A00F03105 /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		F0D5A18D2BA66B4600F03105 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F0D5A1912BA66BD900F03105 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F0D5A1942BA68A2500F03105 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,9 @@
 		F0D5A1772BA0D4BF00F03105 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				F0D5A1932BA68A1A00F03105 /* ViewModel */,
+				F0D5A18F2BA66BC900F03105 /* Service */,
+				F0D5A18C2BA66B3100F03105 /* Model */,
 				F0D5A17B2BA0D50600F03105 /* Views */,
 			);
 			path = Cards;
@@ -169,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				F0D5A17C2BA0D51100F03105 /* CardView.swift */,
-				F0D5A1842BA4F0A700F03105 /* CardViewModel.swift */,
 				F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */,
 				F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */,
 				F0D5A1802BA3CC4000F03105 /* SwipeActionIndicatorView.swift */,
@@ -177,6 +185,31 @@
 				F0D5A18A2BA6669A00F03105 /* CardStackView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F0D5A18C2BA66B3100F03105 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0D5A18D2BA66B4600F03105 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0D5A18F2BA66BC900F03105 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F0D5A1912BA66BD900F03105 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F0D5A1932BA68A1A00F03105 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0D5A1942BA68A2500F03105 /* UserViewModel.swift */,
+				F0D5A1842BA4F0A700F03105 /* CardViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,12 +283,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0D5A1612BA0D43900F03105 /* ContentView.swift in Sources */,
+				F0D5A18E2BA66B4600F03105 /* UserModel.swift in Sources */,
 				F0D5A17D2BA0D51100F03105 /* CardView.swift in Sources */,
 				F0D5A1872BA4F1FF00F03105 /* CardImageButtonOverlay.swift in Sources */,
 				F0D5A1812BA3CC4000F03105 /* SwipeActionIndicatorView.swift in Sources */,
 				F0D5A1892BA65F2700F03105 /* CardImageIndicatorView.swift in Sources */,
 				F0D5A18B2BA6669A00F03105 /* CardStackView.swift in Sources */,
 				F0D5A15F2BA0D43900F03105 /* TinderCloneApp.swift in Sources */,
+				F0D5A1922BA66BD900F03105 /* UserService.swift in Sources */,
+				F0D5A1952BA68A2500F03105 /* UserViewModel.swift in Sources */,
 				F0D5A17F2BA0D51F00F03105 /* UserInfoView.swift in Sources */,
 				F0D5A1832BA3CDF300F03105 /* SizeConstants.swift in Sources */,
 				F0D5A1852BA4F0A700F03105 /* CardViewModel.swift in Sources */,

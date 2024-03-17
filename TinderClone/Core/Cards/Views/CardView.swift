@@ -10,7 +10,11 @@ import SwiftUI
 struct CardView: View {
     @State private var xOffset: CGFloat = 0
     @State private var degrees: Double = 0
-    @State private var cardVM = CardViewModel()
+    @State private var cardVM: CardViewModel
+    
+    init(user: UserModel) {
+        _cardVM = State(wrappedValue: CardViewModel(user: user))
+    }
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -32,6 +36,7 @@ struct CardView: View {
             }
             
             UserInfoView()
+                .environment(cardVM)
 //                .padding(.horizontal)
             
         }
@@ -73,5 +78,5 @@ private extension CardView {
 
 
 #Preview {
-    CardView()
+    CardView(user: MockUsers.users[0])
 }

@@ -27,5 +27,5 @@ struct CardImageButtonOverlay: View {
 
 #Preview {
     CardImageButtonOverlay()
-        .environment(CardViewModel())
+        .environment(CardViewModel(user: MockUsers.users[0]))
 }
