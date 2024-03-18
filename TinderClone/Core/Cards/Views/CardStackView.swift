@@ -13,6 +13,7 @@ struct CardStackView: View {
         ZStack {
             ForEach(userVM.users) { user in
                 CardView(user: user)
+                    .environment(userVM)
             }
         }
     }

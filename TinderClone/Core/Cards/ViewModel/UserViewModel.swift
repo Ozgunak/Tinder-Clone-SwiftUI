@@ -17,11 +17,16 @@ import Foundation
         Task { await fetchUsers() }
     }
     
+    @MainActor
     func fetchUsers() async {
         do {
             users = try await service.fetchUsers()
         } catch {
             print("DEBUG: fetching users failed \(error.localizedDescription)")
         }
+    }
+    
+    func removeUser(_ user: UserModel) {
+        users.removeAll(where: { $0.id == user.id })
     }
 }

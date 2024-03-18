@@ -11,7 +11,7 @@ struct CardView: View {
     @State private var xOffset: CGFloat = 0
     @State private var degrees: Double = 0
     @State private var cardVM: CardViewModel
-    
+    @Environment(UserViewModel.self) private var userVM
     init(user: UserModel) {
         _cardVM = State(wrappedValue: CardViewModel(user: user))
     }
@@ -67,11 +67,19 @@ private extension CardView {
             xOffset = 0
             degrees = 0
         } else if width > SizeConstants.screenCutoff {
-            xOffset = 500
-            degrees = 12
+            withAnimation {
+                xOffset = 500
+                degrees = 12
+            } completion: {
+                userVM.removeUser(cardVM.user)
+            }
         } else {
-            xOffset = -500
-            degrees = -12
+            withAnimation {
+                xOffset = -500
+                degrees = -12
+            } completion: {
+                userVM.removeUser(cardVM.user)
+            }
         }
     }
 }
@@ -79,4 +87,5 @@ private extension CardView {
 
 #Preview {
     CardView(user: MockUsers.users[0])
+        .environment(UserViewModel(service: UserService()))
 }
