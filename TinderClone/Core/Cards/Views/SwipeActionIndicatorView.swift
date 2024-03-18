@@ -12,7 +12,7 @@ struct SwipeActionIndicatorView: View {
     
     var body: some View {
         HStack {
-            Text("LIKE")
+            Text(SwipeActionButtonType.like.title)
                 .font(.title)
                 .fontWeight(.heavy)
                 .foregroundStyle(.green)
@@ -26,7 +26,7 @@ struct SwipeActionIndicatorView: View {
             
             Spacer()
             
-            Text("NOPE")
+            Text(SwipeActionButtonType.dislike.title)
                 .font(.title)
                 .fontWeight(.heavy)
                 .foregroundStyle(.red)

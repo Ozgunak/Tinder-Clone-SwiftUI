@@ -14,12 +14,11 @@ import Foundation
     ]
     
     var currentImageIndex: Int = 0
-    
     var currentImageName: String {
-//        images[currentImageIndex]
         user.imageUrls[currentImageIndex]
     }
     var user: UserModel
+    var action: SwipeActionButtonType?
     
     init(user: UserModel) {
         self.user = user

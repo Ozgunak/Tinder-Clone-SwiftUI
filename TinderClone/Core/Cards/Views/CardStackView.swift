@@ -21,5 +21,4 @@ struct CardStackView: View {
 
 #Preview {
     CardStackView()
-//        .environment(UserViewModel(service: UserService()))
 }

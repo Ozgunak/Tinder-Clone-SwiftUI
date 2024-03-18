@@ -9,6 +9,8 @@ import Foundation
 
 @Observable class UserViewModel {
     var users: [UserModel] = []
+    var likedUsers: [UserModel] = []
+    var dislikedUsers: [UserModel] = []
     
     private var service: UserService
     
@@ -26,7 +28,18 @@ import Foundation
         }
     }
     
-    func removeUser(_ user: UserModel) {
+    private func removeUser(_ user: UserModel) {
         users.removeAll(where: { $0.id == user.id })
     }
+    
+    func likeUserAction(_ user: UserModel, isLiked: Bool) {
+        
+            if isLiked {
+                likedUsers.append(user)
+            } else {
+                dislikedUsers.append(user)
+            }
+        removeUser(user)
+        }
+
 }
