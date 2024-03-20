@@ -19,6 +19,9 @@ import Foundation
     }
     var user: UserModel
     var action: SwipeActionButtonType?
+    var xOffset: CGFloat = 0
+    var degrees: Double = 0
+    var profileButtonToggle: Bool = false
     
     init(user: UserModel) {
         self.user = user

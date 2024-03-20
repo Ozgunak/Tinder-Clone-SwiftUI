@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserInfoView: View {
     @Environment(CardViewModel.self) private var cardVM
-    
+    @Binding var profileButtonPressed: Bool
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -22,13 +22,13 @@ struct UserInfoView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    
-                }, label: {
+                Button{
+                    profileButtonPressed.toggle()
+                } label: {
                     Image(systemName: "arrow.up.circle")
                         .fontWeight(.bold)
                         .imageScale(.large)
-                })
+                }
             }
             
             Text(cardVM.user.info)
@@ -46,6 +46,6 @@ struct UserInfoView: View {
 }
 
 #Preview {
-    UserInfoView()
+    UserInfoView(profileButtonPressed: .constant(false))
         .environment(CardViewModel(user: MockUsers.users[0]))
 }

@@ -30,7 +30,7 @@ struct CardActionButtonView: View {
                 Circle()
                     .fill(.white)
                     .frame(width: 48, height: 48)
-                    .shadow(radius: 6)
+                    .shadow(radius: 4)
             }
     }
 }

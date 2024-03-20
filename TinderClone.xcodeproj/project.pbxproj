@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F0BAB0BD2BA8CB2B007274A5 /* CardActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0BC2BA8CB2A007274A5 /* CardActionButtonView.swift */; };
 		F0BAB0C12BA90961007274A5 /* SwipeActionButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C02BA90961007274A5 /* SwipeActionButtonType.swift */; };
+		F0BAB0C42BA90CCC007274A5 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */; };
+		F0BAB0C62BAA45B2007274A5 /* CardImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C52BAA45B2007274A5 /* CardImagesView.swift */; };
+		F0BAB0C82BAAA205007274A5 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C72BAAA205007274A5 /* Modifiers.swift */; };
 		F0D5A15F2BA0D43900F03105 /* TinderCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A15E2BA0D43900F03105 /* TinderCloneApp.swift */; };
 		F0D5A1632BA0D43A00F03105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D5A1622BA0D43A00F03105 /* Assets.xcassets */; };
 		F0D5A1662BA0D43A00F03105 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D5A1652BA0D43A00F03105 /* Preview Assets.xcassets */; };
@@ -29,6 +32,9 @@
 /* Begin PBXFileReference section */
 		F0BAB0BC2BA8CB2A007274A5 /* CardActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionButtonView.swift; sourceTree = "<group>"; };
 		F0BAB0C02BA90961007274A5 /* SwipeActionButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionButtonType.swift; sourceTree = "<group>"; };
+		F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		F0BAB0C52BAA45B2007274A5 /* CardImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImagesView.swift; sourceTree = "<group>"; };
+		F0BAB0C72BAAA205007274A5 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		F0D5A15B2BA0D43900F03105 /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D5A15E2BA0D43900F03105 /* TinderCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCloneApp.swift; sourceTree = "<group>"; };
 		F0D5A1622BA0D43A00F03105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0BAB0C22BA90A6E007274A5 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				F0BAB0C52BAA45B2007274A5 /* CardImagesView.swift */,
+				F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */,
+				F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */,
+				F0D5A1802BA3CC4000F03105 /* SwipeActionIndicatorView.swift */,
+				F0D5A17E2BA0D51F00F03105 /* UserInfoView.swift */,
+				F0BAB0BC2BA8CB2A007274A5 /* CardActionButtonView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		F0D5A1522BA0D43900F03105 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +153,7 @@
 		F0D5A1752BA0D4BA00F03105 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -159,6 +179,7 @@
 		F0D5A1782BA0D4E000F03105 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F0BAB0C72BAAA205007274A5 /* Modifiers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,13 +202,9 @@
 		F0D5A17B2BA0D50600F03105 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F0D5A17C2BA0D51100F03105 /* CardView.swift */,
-				F0D5A1862BA4F1FF00F03105 /* CardImageButtonOverlay.swift */,
-				F0D5A1882BA65F2700F03105 /* CardImageIndicatorView.swift */,
-				F0D5A1802BA3CC4000F03105 /* SwipeActionIndicatorView.swift */,
-				F0D5A17E2BA0D51F00F03105 /* UserInfoView.swift */,
 				F0D5A18A2BA6669A00F03105 /* CardStackView.swift */,
-				F0BAB0BC2BA8CB2A007274A5 /* CardActionButtonView.swift */,
+				F0D5A17C2BA0D51100F03105 /* CardView.swift */,
+				F0BAB0C22BA90A6E007274A5 /* SubViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0D5A18E2BA66B4600F03105 /* UserModel.swift in Sources */,
+				F0BAB0C62BAA45B2007274A5 /* CardImagesView.swift in Sources */,
 				F0D5A17D2BA0D51100F03105 /* CardView.swift in Sources */,
 				F0D5A1872BA4F1FF00F03105 /* CardImageButtonOverlay.swift in Sources */,
 				F0D5A1812BA3CC4000F03105 /* SwipeActionIndicatorView.swift in Sources */,
@@ -299,9 +317,11 @@
 				F0D5A15F2BA0D43900F03105 /* TinderCloneApp.swift in Sources */,
 				F0D5A1972BA68DA700F03105 /* MainTabView.swift in Sources */,
 				F0D5A1922BA66BD900F03105 /* UserService.swift in Sources */,
+				F0BAB0C42BA90CCC007274A5 /* UserProfileView.swift in Sources */,
 				F0D5A1952BA68A2500F03105 /* UserViewModel.swift in Sources */,
 				F0D5A17F2BA0D51F00F03105 /* UserInfoView.swift in Sources */,
 				F0D5A1832BA3CDF300F03105 /* SizeConstants.swift in Sources */,
+				F0BAB0C82BAAA205007274A5 /* Modifiers.swift in Sources */,
 				F0D5A1852BA4F0A700F03105 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
