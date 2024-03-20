@@ -12,6 +12,9 @@
 		F0BAB0C42BA90CCC007274A5 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */; };
 		F0BAB0C62BAA45B2007274A5 /* CardImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C52BAA45B2007274A5 /* CardImagesView.swift */; };
 		F0BAB0C82BAAA205007274A5 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0C72BAAA205007274A5 /* Modifiers.swift */; };
+		F0BAB0CC2BAAA323007274A5 /* CurrentUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0CB2BAAA323007274A5 /* CurrentUserProfile.swift */; };
+		F0BAB0CE2BAAA33E007274A5 /* CurrentUserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0CD2BAAA33E007274A5 /* CurrentUserHeaderView.swift */; };
+		F0BAB0D12BAAA6A6007274A5 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BAB0D02BAAA6A6007274A5 /* EditProfileView.swift */; };
 		F0D5A15F2BA0D43900F03105 /* TinderCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D5A15E2BA0D43900F03105 /* TinderCloneApp.swift */; };
 		F0D5A1632BA0D43A00F03105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D5A1622BA0D43A00F03105 /* Assets.xcassets */; };
 		F0D5A1662BA0D43A00F03105 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D5A1652BA0D43A00F03105 /* Preview Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		F0BAB0C52BAA45B2007274A5 /* CardImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImagesView.swift; sourceTree = "<group>"; };
 		F0BAB0C72BAAA205007274A5 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		F0BAB0CB2BAAA323007274A5 /* CurrentUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfile.swift; sourceTree = "<group>"; };
+		F0BAB0CD2BAAA33E007274A5 /* CurrentUserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserHeaderView.swift; sourceTree = "<group>"; };
+		F0BAB0D02BAAA6A6007274A5 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		F0D5A15B2BA0D43900F03105 /* TinderClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D5A15E2BA0D43900F03105 /* TinderCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCloneApp.swift; sourceTree = "<group>"; };
 		F0D5A1622BA0D43A00F03105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +81,31 @@
 				F0BAB0BC2BA8CB2A007274A5 /* CardActionButtonView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		F0BAB0C92BAAA307007274A5 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		F0BAB0CA2BAAA310007274A5 /* CurrentUserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				F0BAB0CB2BAAA323007274A5 /* CurrentUserProfile.swift */,
+				F0BAB0CD2BAAA33E007274A5 /* CurrentUserHeaderView.swift */,
+			);
+			path = CurrentUserProfile;
+			sourceTree = "<group>";
+		};
+		F0BAB0CF2BAAA698007274A5 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				F0BAB0D02BAAA6A6007274A5 /* EditProfileView.swift */,
+			);
+			path = EditProfile;
 			sourceTree = "<group>";
 		};
 		F0D5A1522BA0D43900F03105 = {
@@ -153,7 +184,9 @@
 		F0D5A1752BA0D4BA00F03105 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F0BAB0C32BA90CCC007274A5 /* UserProfileView.swift */,
+				F0BAB0CA2BAAA310007274A5 /* CurrentUserProfile */,
+				F0BAB0CF2BAAA698007274A5 /* EditProfile */,
+				F0BAB0C92BAAA307007274A5 /* UserProfile */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -305,10 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0BAB0D12BAAA6A6007274A5 /* EditProfileView.swift in Sources */,
 				F0D5A18E2BA66B4600F03105 /* UserModel.swift in Sources */,
 				F0BAB0C62BAA45B2007274A5 /* CardImagesView.swift in Sources */,
 				F0D5A17D2BA0D51100F03105 /* CardView.swift in Sources */,
 				F0D5A1872BA4F1FF00F03105 /* CardImageButtonOverlay.swift in Sources */,
+				F0BAB0CE2BAAA33E007274A5 /* CurrentUserHeaderView.swift in Sources */,
 				F0D5A1812BA3CC4000F03105 /* SwipeActionIndicatorView.swift in Sources */,
 				F0BAB0BD2BA8CB2B007274A5 /* CardActionButtonView.swift in Sources */,
 				F0D5A1892BA65F2700F03105 /* CardImageIndicatorView.swift in Sources */,
@@ -320,6 +355,7 @@
 				F0BAB0C42BA90CCC007274A5 /* UserProfileView.swift in Sources */,
 				F0D5A1952BA68A2500F03105 /* UserViewModel.swift in Sources */,
 				F0D5A17F2BA0D51F00F03105 /* UserInfoView.swift in Sources */,
+				F0BAB0CC2BAAA323007274A5 /* CurrentUserProfile.swift in Sources */,
 				F0D5A1832BA3CDF300F03105 /* SizeConstants.swift in Sources */,
 				F0BAB0C82BAAA205007274A5 /* Modifiers.swift in Sources */,
 				F0D5A1852BA4F0A700F03105 /* CardViewModel.swift in Sources */,
