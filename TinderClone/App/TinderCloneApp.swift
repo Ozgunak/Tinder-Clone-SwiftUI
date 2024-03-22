@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TinderCloneApp: App {
+    @State private var matchManager = MatchManager()
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .environment(matchManager)
         }
     }
 }

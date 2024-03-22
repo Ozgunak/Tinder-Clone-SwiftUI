@@ -9,12 +9,21 @@ import SwiftUI
 
 struct CardStackView: View {
     @State private var userVM = UserViewModel(service: UserService())
+    @State private var showMatchedView: Bool = false
+    @Environment(MatchManager.self) private var matchManager
+
     var body: some View {
         NavigationStack {
             ZStack {
-                ForEach(userVM.users) { user in
-                    CardView(user: user)
-                        .environment(userVM)
+                ZStack {
+                    ForEach(userVM.users) { user in
+                        CardView(user: user)
+                            .environment(userVM)
+                    }
+                }
+                .blur(radius: showMatchedView ? 20 : 0)
+                if showMatchedView {
+                    UserMatchView(show: $showMatchedView, user: MockUsers.users[0], matchUser: MockUsers.users[2])
                 }
             }
             .toolbar {
@@ -31,4 +40,5 @@ struct CardStackView: View {
 
 #Preview {
     CardStackView()
+        .environment(MatchManager())
 }
